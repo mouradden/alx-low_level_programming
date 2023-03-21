@@ -6,8 +6,11 @@
  */
 int print_last_digit(int n)
 {
-	if (n < 0)
-		n *= -1;
-	_putchar(n%10 + '0');
-	return (n%10);
+	int modulo;
+
+	modulo = n%10;
+	if (modulo < 0)
+		modulo *= -1;
+	_putchar(modulo + '0');
+	return (modulo);
 }
