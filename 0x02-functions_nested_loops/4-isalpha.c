@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - check alpha
+ * _isalpha - check alpha
  * @c: the parametre
  * Return: 1 if is alpha else 0
  */
