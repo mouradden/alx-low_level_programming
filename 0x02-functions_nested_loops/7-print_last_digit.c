@@ -8,7 +8,7 @@ int print_last_digit(int n)
 {
 	int modulo;
 
-	modulo = n%10;
+	modulo = n % 10;
 	if (modulo < 0)
 		modulo *= -1;
 	_putchar(modulo + '0');
