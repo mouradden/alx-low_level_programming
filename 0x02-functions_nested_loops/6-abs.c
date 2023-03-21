@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs - get print_last_digit 
+ * _abs - get print_last_digit
  * @n: the parametre
  * Return: n if n is positive or -n if n is negative
  */
