@@ -6,6 +6,7 @@
 void print_to_98(int n)
 {
 	int i;
+	int nb;
 
 	if (n == 98)
 	{
@@ -45,9 +46,10 @@ void print_to_98(int n)
 			}
 			else
 			{
+				nb = n;
 				_putchar(i / 100 + '0');
-				i /= 10;
-				_putchar(i % 10 + '0');
+				nb /= 10;
+				_putchar(nb % 10 + '0');
 				_putchar(n % 10 + '0');
 			}
 			if (i > 98)
