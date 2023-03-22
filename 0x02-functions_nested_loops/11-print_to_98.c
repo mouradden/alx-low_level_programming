@@ -1,3 +1,8 @@
+#include "main.h"
+/**
+* print_to_98 - print numbers to 98
+* @n: parametre
+*/
 void print_to_98(int n)
 {
 	int i;
