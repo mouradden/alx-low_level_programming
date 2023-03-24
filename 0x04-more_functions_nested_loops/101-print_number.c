@@ -5,20 +5,23 @@
  */
 void print_number(int n)
 {
-	unsigned int nb;
-
-	nb = n;
-	if (nb >= 0 && nb <= 9)
-		_putchar(nb + '0');
-	else if (nb < 0)
+	if (n == -2147483648)
 	{
-		nb *= -1;
 		_putchar('-');
-		print_number(nb);
+		print_number(2);
+		print_number(147483648);
+	}
+	else if (n >= 0 && n <= 9)
+		_putchar(n + '0');
+	else if (n < 0)
+	{
+		n *= -1;
+		_putchar('-');
+		print_number(n);
 	}
 	else
 	{
-		print_number(nb / 10);
-		print_number(nb % 10);
+		print_number(n / 10);
+		print_number(n % 10);
 	}
 }
