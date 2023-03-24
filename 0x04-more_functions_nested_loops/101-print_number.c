@@ -5,13 +5,12 @@
  */
 void print_number(int n)
 {
-	int	i;
-
 	if (n >= 0 && n <= 9)
-		_putchar(i + '0');
+		_putchar(n + '0');
 	else if (n < 0)
 	{
 		n *= -1;
+		_putchar('-');
 		print_number(n);
 	}
 	else
@@ -19,5 +18,4 @@ void print_number(int n)
 		print_number(n / 10);
 		print_number(n % 10);
 	}
-	_putchar('\n');
 }
