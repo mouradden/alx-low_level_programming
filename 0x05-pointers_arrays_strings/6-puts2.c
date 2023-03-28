@@ -5,13 +5,18 @@
  */
 void puts2(char *str)
 {
+	int len;
 	int i;
 
-	i = 0;
+	len = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	i = (len - 1) / 2;
 	while (str[i])
 	{
-		if (i % 2 == 0)
-			write(1, &str[i], 1);
+		write(1, &str[i], 1);
 		i++;
 	}
 	write(1, "\n", 1);
