@@ -23,5 +23,4 @@ void rev_string(char *s)
 		s[len - i] = help;
 		i++;
 	}
-	write(1, "\n", 1);
 }
