@@ -5,13 +5,22 @@
  */
 void puts_half(char *str)
 {
+	int len;
 	int i;
 
-	i = 0;
+	len = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	len --;
+	if (len % 2 == 0)
+		i = len / 2;
+	else
+		i = (len - 1) / 2;
 	while (str[i])
 	{
-		if (i % 2 == 0)
-			write(1, &str[i], 1);
+		write(1, &str[i], 1);
 		i++;
 	}
 	write(1, "\n", 1);
