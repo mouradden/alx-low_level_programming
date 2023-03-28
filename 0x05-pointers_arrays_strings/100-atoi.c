@@ -22,7 +22,6 @@ int _atoi(char *s)
 		{
 			res *= 10;
 			res -= (s[i] - '0');
-			signe = 1;
 		}
 		else if (signe == 1)
 			break;
