@@ -9,8 +9,8 @@ char *leet(char *str)
 {
 	int i;
 	int j;
-	char lettres[10] = "aAeEoOtTlL";
-	char to_covert_to[] = "43071";
+	char lettres[11] = "aAeEoOtTlL";
+	char to_covert_to[6] = "43071";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
