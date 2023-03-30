@@ -9,7 +9,6 @@ char *leet(char *str)
 {
 	int i;
 	int j;
-
 	char lettres[10] = "aAeEoOtTlL";
 	char to_covert_to[] = "43071";
 
