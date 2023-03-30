@@ -18,6 +18,5 @@ char *leet(char *str)
 			if (str[i] == lettres[j])
 				str[i] = to_covert_to[j / 2];
 	}
-	
 	return (str);
 }
