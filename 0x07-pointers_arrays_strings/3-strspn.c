@@ -12,11 +12,22 @@ unsigned int _strspn(char *s, char *accept)
 	count = 0;
 	while (*s)
 	{
-		if (ft_strchr(accept, *s))
+		if (_strchr(accept, *s))
 			count++;
 		else
 			break;
 		s++;
 	}
 	return (count);
+}
+
+int main(void)
+{
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
+
+    n = _strspn(s, f);
+    printf("%u\n", n);
+    return (0);
 }
