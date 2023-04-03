@@ -12,10 +12,10 @@ char *_strchr(char *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		else
+		if (s[i] != c)
 			i++;
+		else
+			return ((char *)s + i);
 	}
 	if (s[i] == c)
 		return ((char *)s + i);
