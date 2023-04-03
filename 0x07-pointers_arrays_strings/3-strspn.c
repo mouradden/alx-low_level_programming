@@ -7,27 +7,17 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int    count;
+	unsigned int i, count;
 
 	count = 0;
-	while (*s)
+	while (s[count] != '\0')
 	{
-		if (_strchr(accept, *s))
-			count++;
-		else
-			break;
-		s++;
+		i = 0;
+		while (accept[i] != '\0' && s[count] != accept[i])
+			i++;
+		if (accept[i] == '\0')
+			return (count);
+		count++;
 	}
 	return (count);
-}
-
-int main(void)
-{
-    char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
-
-    n = _strspn(s, f);
-    printf("%u\n", n);
-    return (0);
 }
