@@ -10,11 +10,11 @@ char *_strpbrk(char *s, char *accept)
 	unsigned int i;
 	unsigned int len;
 
-	i = 0;
 	while (accept[len])
 		len++;
 	while (*s)
 	{
+		i = 0;
 		while (i < len)
 		{
 			if (accept[i] == *s)
