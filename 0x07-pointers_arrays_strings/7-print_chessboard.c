@@ -4,7 +4,7 @@
  * @a: the chess to display
  * Return: nothing
  */
-void print_chessboard(char (*a)[8]);
+void print_chessboard(char (*a)[8])
 {
 	int i;
     int j;
