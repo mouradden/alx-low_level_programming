@@ -9,11 +9,29 @@
 
 int main(int ac, char **av)
 {
-	int i;
+	int i, j, res;
 
-    i = 0;
-    
-	printf("%d\n", atoi(av[1]) * atoi(av[2])); 
-	
+	i = 1;
+	res = 0;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			if (av[i][j] < '0' && av[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		i++;
+	}
+	i = 1;
+	while (i < ac)
+	{
+		res += atoi(av[i]);
+		i++;
+	}
+	printf("%d\n", res);
 	return (0);
 }
