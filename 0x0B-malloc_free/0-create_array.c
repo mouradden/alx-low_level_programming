@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * create_array - check uppercase
+ * create_array - allocate the array and fill it with the caractere c
  * @size: size of array
  * @c: the parametre
  * Return: the pointer to the array
