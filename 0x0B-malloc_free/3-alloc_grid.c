@@ -1,5 +1,22 @@
 #include "main.h"
 /**
+ * free_array - free all cases in the 2 dimensions array
+ * @array:  2 dim array
+ * Return: nothing
+ */
+void free_array(int **array)
+{
+	int		i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}
+/**
  * alloc_grid - allocate two dimensions array and fill it with 0
  * @width: row of 2 dim array
  * @height: column of 2 dim array
@@ -12,7 +29,7 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	array = malloc(height * sizeof(int *) + 1);
+	array = malloc(height * sizeof(int *));
 	if (!array)
 		return (NULL);
 	i = 0;
@@ -21,12 +38,15 @@ int **alloc_grid(int width, int height)
 	{
 		array[i] = malloc(width * sizeof(int));
 		if (!array[i])
+		{
+			free_array(array);
 			return (NULL);
+		}
+			
 		for (j = 0; j < width; j++)
 		{
 			array[i][j] = 0;
 		}
 	}
-	array[i] = NULL;
 	return (array);
 }
