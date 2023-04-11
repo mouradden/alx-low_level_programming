@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * free_grid - free two dimensions array
+ * @grid: the two dimensions array
  * @height: column of 2 dim array
  * Return: the pointer to the 2 dim array
  */
