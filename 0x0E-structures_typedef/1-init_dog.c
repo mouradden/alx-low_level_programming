@@ -5,6 +5,7 @@
  * @name: the name to assign to struct
  * @age: the age to assign to struct
  * @owner: the owner to assign to struct
+ * Return: nothing
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
